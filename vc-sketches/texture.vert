@@ -1,5 +1,5 @@
 /*
-Certex shader tooked from: Shader Texture 2D - basic.vert by aferriss: https://editor.p5js.org/aferriss/sketches/m74DWvY9z
+Vertex shader inspired on: Shader Texture 2D - basic.vert by aferriss: https://editor.p5js.org/aferriss/sketches/m74DWvY9z
 */
 
 precision mediump float;
@@ -17,7 +17,9 @@ void main() {
     vTexCoord = aTexCoord;
 
     vec4 positionVec4 = vec4(aPosition, 1.0);
-    positionVec4.xy = positionVec4.xy * 2.0 - 1.0;
+    positionVec4.x = positionVec4.x * 2.0 - 1.0;
+    positionVec4.y = positionVec4.y * 2.0 - 1.0;
+    positionVec4.y = -positionVec4.y;
 
     // visible vertices are only those which lie within "Normalize Device Coordinates"
     // NDC, i.e., a cube with dimensions [-1, 1] along each of its axes
