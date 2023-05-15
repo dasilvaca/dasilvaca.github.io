@@ -10,7 +10,7 @@ setup = () => {
 
 draw = () => {
     background(0);
-    resizeCanvas(windowWidth, windowHeight)
+    resizeCanvas(windowWidth - 20, windowHeight - 20)
     shader(coloring_shader);
     rect(width, height,0);
     }
