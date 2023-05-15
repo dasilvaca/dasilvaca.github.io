@@ -5,7 +5,7 @@ preload = () => {
     }
 
 setup = () => {
-    createCanvas(windowWidth, windowHeight, WEBGL);
+    createCanvas(windowWidth - 20, windowHeight - 20, WEBGL);
     }
 
 draw = () => {
